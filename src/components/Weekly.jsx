@@ -3,9 +3,9 @@ import React from 'react';
 class Weekly extends React.Component {
     render() {
         return(
-            <div>
+            <h1>
                 Weekly
-            </div>
+            </h1>
         );
     }
 }

@@ -3,9 +3,9 @@ import React from 'react';
 class PopularBattle extends React.Component {
     render() {
         return(
-            <div>
+            <h1>
                 PopularBattle
-            </div>
+            </h1>
         );
     }
 }

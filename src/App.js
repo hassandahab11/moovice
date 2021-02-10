@@ -1,27 +1,18 @@
 import React from "react";
 import {BrouserRoute, Link, Switch, Route} from "react-router-dom";
-import logo from "./logo.svg";
+import Favorite from "./components/Favorite";
+import PopularBattle from "./components/PopularBattele";
+import Popular from "./components/Popular";
+import Weekly from "./components/Weekly";
+import WeeklyBattle from "./components/WeeklyBattle";
 import "./App.css";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>Hello Hassan</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+     <BrouserRoute>
+
+     </BrouserRoute>
     );
   }
 }
