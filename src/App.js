@@ -4,6 +4,7 @@ import Favorite from "./components/Favorite";
 import PopularBattle from "./components/PopularBattele";
 import Popular from "./components/Popular";
 import Weekly from "./components/Weekly";
+import Home from "./components/Home";
 import WeeklyBattle from "./components/WeeklyBattle";
 import "./App.css";
 
@@ -23,7 +24,7 @@ class App extends React.Component {
         </nav>
 
         <Switch>
-          <Route exact path="/" component={App} ></Route>
+          <Route exact path="/Home" component={Home} ></Route>
           <Route path="/weekly" component={Weekly}></Route>
           <Route path="/weekly-battle" component={WeeklyBattle}></Route>
           <Route path="/popular" component={Popular}></Route>
