@@ -10,15 +10,29 @@ class Popular extends React.Component {
         }
     }
 
+    componentDidMount  (){
+        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=46a12a0dcce2af5d37ce67d499098b1f")
+        .then(response => response.json())
+            .then(response => {
+                console.log(response)
 
-    // componentDidMount (){
-    //     fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key={46a12a0dcce2af5d37ce67d499098b1f}")
-    // }
+                this.setState({
+                    movies:response.results
+                    
 
+                })
+            })
+    }
+
+
+    
     render() {
         return(
             <h1>
                 Popular
+                {this.state.movies.map((movie)=>{
+                    return <h1>{movie.title}</h1>
+                })}
             </h1>
         );
     }
