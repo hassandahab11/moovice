@@ -6,9 +6,19 @@ import Popular from "./components/Popular";
 import Weekly from "./components/Weekly";
 import Home from "./components/Home";
 import WeeklyBattle from "./components/WeeklyBattle";
+import Card from "./components/Card";
 import "./App.css";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        image : "./images/default.png",
+        title : "",
+        Year: "",
+        description : ""
+    }
+}
   render() {
     return (
       <BrowserRouter>
@@ -24,14 +34,14 @@ class App extends React.Component {
         </nav>
 
         <Switch>
-          <Route exact path="/Home" component={Home} ></Route>
+          <Route exact path="/" component={Home} ></Route>
           <Route path="/weekly" component={Weekly}></Route>
           <Route path="/weekly-battle" component={WeeklyBattle}></Route>
           <Route path="/popular" component={Popular}></Route>
           <Route path="/popular-battle" component={PopularBattle}></Route>
           <Route path="/favorite" component={Favorite}></Route>
         </Switch>
-
+        
       </BrowserRouter>
     );
   }
